@@ -1,5 +1,7 @@
 package app;
 
+import app.entities.Rectangle;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -73,7 +75,7 @@ public class Main {
 		// *********************************** LOOPS
 		// ***************************************
 
-		int x = 6, y = 3;
+		// int x = 6, y = 3;
 
 //		while (y <= x + 6) {
 //			System.out.println(y);
@@ -95,6 +97,31 @@ public class Main {
 //				break;
 //			System.out.println(i);
 //		}
+
+//		label:
+//		for (int i = 1; i <= 5; i++) {
+//			if (i == 3)
+//				continue;
+//			for (int j = 1; j <= 5; j++) {
+//				if (j == 2)
+//					break label;
+//				System.out.print("j:" + j + " ");
+//			}
+//			System.out.println("i: " + i);
+//		}
+
+		Rectangle r1 = new Rectangle(10, 5.6);
+		System.out.println(r1.getArea());
+		Rectangle[] rectangles = { r1, new Rectangle(2, 3), new Rectangle(23, 4) };
+
+		for (int i = 0; i < rectangles.length; i++) {
+			System.out.printf("%f è l'area del rettangolo, %f è il perimetro.\n", rectangles[i].getArea(),
+					rectangles[i].getPerimeter());
+			// %f è il segnaposto da utilizzare per sostituire un valore Double nel testo
+			// altri segnaposti utili sono %s (per le stringhe), %d (per gli interi), %b
+			// (per i booleani)
+		}
+
 
 	}
 
